@@ -2,7 +2,7 @@ language: ruby
 dist: trusty
 rvm:
  - 2.5
-install: git clone https://github.com/${TRAVIS_REPO_SLUG%%/*}/qubesos.github.io ~/qubesos.github.io
+install: git clone -b ${TRAVIS_BRANCH} https://github.com/${TRAVIS_REPO_SLUG%%/*}/qubesos.github.io ~/qubesos.github.io
 script: ~/qubesos.github.io/_utils/travis.sh
 addons:
   apt:
@@ -14,6 +14,6 @@ addons:
 notifications:
   email:
     recipients:
-      - adw@qubes-os.org
-    on_success: never
+      - qubedmaiska@protonmail.com
+    on_success: always
     on_failure: always
